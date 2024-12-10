@@ -7,6 +7,8 @@ const pages = [
     document.getElementById('answer6')
 ];
 
+const text = document.getElementById('text');
+const iconClose = document.getElementById('close');
 const resultText = document.getElementById('result');
 const resultBtn = document.getElementById('get');
 
@@ -39,4 +41,9 @@ resultBtn.onclick = function () {
     } else {
         resultText.textContent = "Please submit the page that is your name in";
     }
+    text.classList.add('show');
 }
+
+iconClose.addEventListener('click', function () {
+    text.classList.remove('show');
+});
